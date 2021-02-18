@@ -1,0 +1,24 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'user1' on host 'iiitb-OptiPlex-3050' (Linux_x86_64 version 4.15.0-70-generic) on Thu Feb 18 15:57:02 IST 2021
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/user1/FFT_HLS'
+Sourcing Tcl script '/home/user1/FFT_HLS/test_jb/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project '/home/user1/FFT_HLS/test_jb'.
+INFO: [HLS 200-10] Opening solution '/home/user1/FFT_HLS/test_jb/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200t-fbg676-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+5
+    while executing
+"source /home/user1/FFT_HLS/test_jb/solution1/csim.tcl"
+    invoked from within
+"hls::main /home/user1/FFT_HLS/test_jb/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

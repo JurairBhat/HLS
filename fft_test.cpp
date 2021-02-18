@@ -1,8 +1,10 @@
 #include "fft.h"
-//#include "fft.c"
+#include "fft.cpp"
+#include<iostream>
 
+using namespace std ;
 void generate_sine_wave( int array[], int f1, int f2, int a1, int a2){
-	unsigned int i;
+	int i;
 	double t;
   float Fs = 512.0;
 	t=0;
@@ -15,7 +17,7 @@ void generate_sine_wave( int array[], int f1, int f2, int a1, int a2){
 
 #define HW_COSIM 1;
 int main(){
-	unsigned int i;
+	int i;
 	const unsigned int MAXBINS = SPECTRUM_SIZE, MINBINS = 0;
 	double absolute;
   //FILE *fp;
@@ -47,10 +49,10 @@ int main(){
   #endif
 
 
-  for (int i = 0 ; i < N ; i++)
+  for ( i = 0 ; i < N ; i++)
   {
     power_spectrum[i]=((double)re_hw[i]*(double)re_hw[i])+((double)im_hw[i]*(double)im_hw[i]);
-    printf("%d+i%d S: %d \n",re_hw[i],im_hw[i],power_spectrum[i]);
+    cout << re_hw[i] <<"+ i" <<im_hw[i] <<" : " << power_spectrum[i]<<"\n";
 
   }
   #ifdef HW_COSIM
@@ -61,16 +63,16 @@ int main(){
       }
  if(err_cnt > 0)
    {
-     printf("\n------SIMULATION FAILED------\n");
+     cout << "\n------SIMULATION FAILED------\n";
      return 1 ;
    }
   else
   {
-         printf("\n-------SIMULATION PASSED -----\n");
+         cout << "\n-------SIMULATION PASSED -----\n";
          return 0;
   }
  #endif
 	//fclose(fp);
-printf("\n------- HARDWARE NOT INVOKED -----\n");
+cout <<"\n------- HARDWARE NOT INVOKED -----\n";
 return 0;
 }

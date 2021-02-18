@@ -1,8 +1,7 @@
-#ifndef FFT_H
-#define FFT_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#ifndef __FFT_H__
+#define __FFT_H__
+#include <iostream>
+#include <cmath>
 #define N         1024
 #define TRUE			1
 #define SPECTRUM_SIZE 	N
@@ -12,7 +11,7 @@
 #define minus2PI 		-6.283185307179586
 #define TWO_PI 			6.283185307179586
 
-
+using namespace std;
 void Init_twiddlefactors(double *);
 void fft(int * ,  int *);
 void bitreverse(int *,int *);
